@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zakat Calculator - جامعہ عزیزیہ انوارالقرآن</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Jamia Azizia Anwarul Quran</h1>
+            <h1 class="urdu">جامعہ عزیزیہ انوارالقرآن</h1>
+            <h2>Zakat Calculator | زکوٰۃ کیلکولیٹر</h2>
+        </header>
+
+        <div class="calculator">
+            <div class="input-group">
+                <label>Enter Cash Amount (نقد رقم داخل کریں)</label>
+                <input type="number" id="cashAmount" placeholder="Enter amount">
+            </div>
+
+            <div class="input-group">
+                <label>Enter Gold Weight in Grams (سونے کا وزن گرام میں)</label>
+                <input type="number" id="goldGrams" placeholder="Enter gold weight in grams">
+            </div>
+
+            <div class="input-group">
+                <label>Enter Silver Weight in Grams (چاندی کا وزن گرام میں)</label>
+                <input type="number" id="silverGrams" placeholder="Enter silver weight in grams">
+            </div>
+
+            <button onclick="calculateZakat()" id="calculateBtn">
+                <span class="btn-text">Calculate Zakat | زکوٰۃ کا حساب کریں</span>
+                <div class="loader" style="display: none;"></div>
+            </button>
+
+            <div class="results">
+                <div class="result-item">
+                    <h3>Cash Zakat (نقد زکوٰۃ):</h3>
+                    <p>₹<span id="cashZakat">0</span></p>
+                </div>
+                <div class="result-item">
+                    <h3>Gold Zakat (سونے کی زکوٰۃ):</h3>
+                    <p>₹<span id="goldZakat">0</span></p>
+                </div>
+                <div class="result-item">
+                    <h3>Silver Zakat (چاندی کی زکوٰۃ):</h3>
+                    <p>₹<span id="silverZakat">0</span></p>
+                </div>
+                <div class="result-item total">
+                    <h3>Total Zakat (کل زکوٰۃ):</h3>
+                    <p>₹<span id="totalZakat">0</span></p>
+                </div>
+            </div>
+
+            <div class="rates-info">
+                <div class="rate-item">
+                    <h3>Current Gold Rate (فی گرام سونے کی قیمت):</h3>
+                    <p>₹<span id="goldRate">0</span>/gram</p>
+                </div>
+                <div class="rate-item">
+                    <h3>Current Silver Rate (فی گرام چاندی کی قیمت):</h3>
+                    <p>₹<span id="silverRate">0</span>/gram</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
